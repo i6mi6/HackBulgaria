@@ -3,7 +3,7 @@ package tasks;
 public class Task2 {
 
 	public static void main(String[] args) {
-		String s = "fl k.ccfsIolskv.~312~ .Ifrckslovelvo";		
+		String s = "o?uin uw?stutnfwat?~413~orwa? thfuisnnrsiu";		
 		decrypt(s);
 	}
 	
@@ -45,10 +45,25 @@ public class Task2 {
 		}
 		
 		
-		System.out.println(message);
+		String repeatedKey=key; //get reapeated key with alphabet length
+		while(repeatedKey.length()<=message.length()){
+			repeatedKey+=repeatedKey;
+		}
+		
+		repeatedKey = repeatedKey.substring(0,message.length());
+		
+		String result="";
+		for(int i=0; i<repeatedKey.length(); i++){
+			result+=alphabet.charAt((aLength+alphabet.indexOf(message.charAt(i))-alphabet.indexOf(repeatedKey.charAt(i)))%aLength);
+		}
+				
+		/*System.out.println(message);
 		System.out.println(aLength);
 		System.out.println(kLength);
 		System.out.println(alphabet);
-		System.out.println(key);
+		System.out.println(repeatedKey);
+		System.out.println(key);*/
+		
+		System.out.println(result);
 	}
 }
