@@ -15,8 +15,6 @@ public class Stack<T> {
 		s.push(53);
 		s.pop();
 		s.print();
-		
-
 	}
 	
 	public void push(T value){
@@ -49,15 +47,4 @@ public class Stack<T> {
 		}
 	}
 	
-	public class Node<T>{
-		public Node<T> next;
-		public T content;
-		
-		public Node(T c, Node<T> n){
-			content = c;
-			next = n;
-		}
-		
-	}
-
 }

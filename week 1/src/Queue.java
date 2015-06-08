@@ -1,49 +1,45 @@
 
 public class Queue<T> {
-	public static final int CAPACITY=10;
-	public static int size;
-	public static int head;
-	public static int tail;
-	public Object[] elements;
-
+	public int size;
+	public Node<T> first;
+	public Node<T> last;
+	
 	public Queue(){
-		size=0;
-		tail=0;
-		head=0;
-		elements = new Object[CAPACITY];
+		size=0;		
+		
 	}
 	
 	public static void main(String[] args) {
 		Queue<Integer> q = new Queue<Integer>();
-		q.push(10);
-		q.push(20);
+		q.push(6);
+		q.push(5);
+		q.push(53);
 		//q.pop();
-		System.out.println(q.elements[head]);
+		q.print();
 	}
 	
 	public void push(T value){
-		elements[tail]=value;
-		if(tail==CAPACITY){ //if head == tail, queue overflow, increaseCapa() 
-			tail=0;
+		Node n = new Node(value, null);
+		if(last==null){
+			first=n;
+			last=n;
 		}else{
-			tail++;
+			last.next=n;
 		}
+		last=n;
 		size++;
 	}
 	
 	public T pop(){
-		T front=(T)elements[head];
-		if(head+1==CAPACITY){ 
-			head=0;
-		}else{
-			head++;
-		}
+		T el = first.content;
+		first=first.next;
 		size--;
-		return front;
+		
+		return el;
 	}
 	
 	public T peek(){
-		return (T)elements[head];
+		return first.content;
 	}
 	
 	public int size(){
@@ -51,8 +47,10 @@ public class Queue<T> {
 	}
 	
 	public void print(){
-		for(int i=0; i<size; i++){
-			System.out.print(elements[i]+", ");
+		Node<T> current = first;
+		while(current!=null){
+			System.out.print(current.content+", ");
+			current = current.next;
 		}
 	}
 	

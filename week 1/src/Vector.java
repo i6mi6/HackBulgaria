@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 
 public class Vector<T>{
 	public int size;
@@ -11,15 +13,16 @@ public class Vector<T>{
 	
 	public static void main(String[] args) {
 		Vector<Integer> v = new Vector<Integer>();
+		
 		v.add(20);
 		v.add(50);
-		v.pop();
-		v.print();
+		v.remove(1);
+		v.print();		
 	}
 	
 	public void insert(int index, int value){
-		if(size+5==elements.length){
-			//increaseCapa();
+		if(size+5>elements.length){
+			increaseCapa();
 		}
 		for(int i=size; i>index; i--){
 			elements[i]=elements[i-1];
@@ -29,6 +32,9 @@ public class Vector<T>{
 	}
 	
 	public void add(int value){
+		if(size+5>elements.length){
+			increaseCapa();
+		}
 		elements[size++]=value;
 	}
 	
@@ -53,6 +59,11 @@ public class Vector<T>{
 	
 	public int capacity(){
 		return CAPACITY;
+	}
+	
+	public void increaseCapa(){
+		elements=Arrays.copyOf(elements, elements.length*2);
+		//System.out.print("New capacity "+elements.length);
 	}
 	
 	public void print(){
