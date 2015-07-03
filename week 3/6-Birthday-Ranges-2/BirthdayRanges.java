@@ -5,22 +5,39 @@ import binary.IndexedTree;
 public class BirthdayRanges {
 	public static IndexedTree birthdays;
 	public static void main(String[] args) {
-		int[] bds = new int[366];
-		
-		bds[0]=2;
-		bds[1]=1;
-		bds[3]=4;
+		int[] bds = new int[366];		//contains all days of the year (index - day, value - number of people who have birthdays on that day)
+		bds[5]=2;  //2 people on day 5
+		bds[10]=1;
+		bds[6]=1;
+		bds[7]=1; 
+		bds[3]=1;
+		bds[4]=1;
+		bds[11]=1; //1 on day 11
+		bds[21]=1;
+		bds[300]=1; 
+		bds[15]=1;
+
 		birthdays = new IndexedTree(bds);
+		add(8, 3);
+		remove(8, 2);
 		
-		System.out.println(count(0,365));
+		//birthdays.print();
+		
+		System.out.println(count(7,11));
+
 	}
 	
-	public static void add(int day, int numberOfPeople) {
-		birthdays.elements[birthdays.elements.length/2+day]+=numberOfPeople;
+	public static void add(int day, int numberOfPeople) { //O(lgn)
+		birthdays.updateTree(day+birthdays.elements.length/2, numberOfPeople);
 	}
 
 	public static void remove(int day, int numberOfPeople) {
-
+		if(birthdays.elements[day+birthdays.elements.length/2]-numberOfPeople<0){
+			birthdays.updateTree(day+birthdays.elements.length/2, 0);
+		}else{
+			numberOfPeople=birthdays.elements[day+birthdays.elements.length/2]-numberOfPeople;
+			birthdays.updateTree(day+birthdays.elements.length/2, numberOfPeople);
+		}
 	}
 
 	public static int count(int startDay, int endDay) {
