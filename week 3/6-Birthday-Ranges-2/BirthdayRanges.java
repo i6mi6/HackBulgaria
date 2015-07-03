@@ -1,23 +1,28 @@
 package week3;
 
+import java.util.*;
 import binary.IndexedTree;
 
 public class BirthdayRanges {
 	public static IndexedTree birthdays;
+	public static List<Integer> list;
+	
 	public static void main(String[] args) {
-		int[] bds = new int[366];		//contains all days of the year (index - day, value - number of people who have birthdays on that day)
-		bds[5]=2;  //2 people on day 5
-		bds[10]=1;
-		bds[6]=1;
-		bds[7]=1; 
-		bds[3]=1;
-		bds[4]=1;
-		bds[11]=1; //1 on day 11
-		bds[21]=1;
-		bds[300]=1; 
-		bds[15]=1;
+		list = new ArrayList<Integer>();
+		list.add(5);
+		list.add(10);
+		list.add(6);
+		list.add(7);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(11);
+		list.add(21);
+		list.add(300);
+		list.add(15);
 
-		birthdays = new IndexedTree(bds);
+		birthdays = new IndexedTree(convert(list)); 
+		
 		add(8, 3);
 		remove(8, 2);
 		
@@ -25,6 +30,14 @@ public class BirthdayRanges {
 		
 		System.out.println(count(7,11));
 
+	}
+	
+	public static int[] convert(List<Integer> list){ //we pass an array to the index tree (where index of array = day, value = number of people who have 
+		int[] bds = new int[366];					//a birthday on that day)
+		for(int i=0; i<list.size(); i++){
+			bds[list.get(i)]++;
+		}
+		return bds;
 	}
 	
 	public static void add(int day, int numberOfPeople) { //O(lgn)
