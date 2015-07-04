@@ -13,11 +13,11 @@ public class JumpingSoldiers {
 		System.out.println(find(soldiers));
 	}
 	
-	public static int find(int[][] soldiers){
+	public static int find(int[][] soldiers){ //O(knlgn)
 		int max=0;
 		int index=-1;
 		for(int i=0; i<soldiers.length; i++){
-			merge(soldiers[i], 0, soldiers[i].length-1);
+			merge(soldiers[i], 0, soldiers[i].length-1); //O(knlgn)
 			if(max<inversions){
 				max = inversions;
 				index = i;
@@ -27,7 +27,7 @@ public class JumpingSoldiers {
 		return index;
 	}
 	
-	public static void merge(int[] a, int p, int r){
+	public static void merge(int[] a, int p, int r){ 
 		if(p<r){
 			int q=(p+r)/2;
 			merge(a, p, q);
