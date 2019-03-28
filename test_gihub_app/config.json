@@ -1,4 +1,3 @@
 {
-  "regex": "\\[0-9]+\\",
-  "whitelist_prefix": "test_gihub_app/do/"
+  "regex": "\\[0-9]+\\"
 }
