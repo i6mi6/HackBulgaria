@@ -1,5 +1,5 @@
 {
   "regex": "\\[0-9]+\\",
-  "whitelist_prefix": "test_gihub_app",
-  "blacklist_suffix": ".json"
+  "whitelist_rules": ["test_gihub_app*"],
+  "blacklist_rules": ["*.json"]
 }
