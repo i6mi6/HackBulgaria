@@ -1,5 +1,5 @@
 {
-  "regex": "\\[0-9]+\\",
+  "regex": "\\<Container>\\",
   "whitelist_rules": ["test_gihub_app*"],
-  "blacklist_rules": ["*.js", "*.json"]
+  "blacklist_rules": ["*.json"]
 }
