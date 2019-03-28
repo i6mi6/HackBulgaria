@@ -122,7 +122,6 @@ Until then, you can import purchases from this store into your pantry with the b
     if (this.props.data.error) {
       return alert('No Internet connection')
     }
-    let storeConnections = _.get(this.props, 'data.usersStoreConnections.edges', [])
     return (
       <Container>
         <SimpleHeader
