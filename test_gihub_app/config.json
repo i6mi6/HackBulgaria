@@ -1,5 +1,5 @@
 {
-  "regex": "\\<Container>\\",
+  "regex": "\\<Containers>\\",
   "whitelist_rules": ["test_gihub_app*"],
   "blacklist_rules": ["*.json"]
 }
