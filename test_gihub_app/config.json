@@ -1,5 +1,5 @@
 {
-  "regex": "\\<Containers>\\",
+  "regex": "\\connect([a-zA-Z]+,\\",
   "whitelist_rules": ["test_gihub_app*"],
   "blacklist_rules": ["*.json"]
 }

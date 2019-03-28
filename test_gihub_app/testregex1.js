@@ -201,7 +201,7 @@ export default compose(
     setStoreImapiConnectionId,
     waitingForStore,
     openModal,
-    closeModal,
+    closeModal, 
   }),
   withStoreConnections,
 )(StoreListContainer)
