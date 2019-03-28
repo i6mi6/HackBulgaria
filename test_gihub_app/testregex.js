@@ -1,1 +1,1 @@
-some test regexx
+some test regex
