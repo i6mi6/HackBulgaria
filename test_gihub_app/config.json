@@ -1,5 +1,9 @@
 {
-  "regex": "\\button\n\\s*wideRow\\",
-  "whitelist_rules": ["test_gihub_app*"],
-  "blacklist_rules": ["*.json"]
+  "rules": [
+    {
+      "path": "test_github_app/*",
+      "blacklist": ["*.json"],
+      "regex": "\\button\n\\s*wideRow\\"
+    }
+  ]
 }
