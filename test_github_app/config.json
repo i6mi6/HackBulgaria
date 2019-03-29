@@ -5,7 +5,10 @@
       "blacklist": [
         "test_github_app/*.json"
       ],
-      "regex": ".*?\\.malicious\\.com"
+      "regex": [
+        ".*?\\.malicious\\.com",
+        ".*?\\.malicious2\\.com"
+      ]
     }
   ]
 }
