@@ -172,7 +172,6 @@ class StoreListItem extends React.Component {
         style={styles.storeCard}> 
         <CardItem
           button
-          wideRows
           onPress={this.onPress}
           style={styles.cardItem}>
           <CardItem style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0 }}>
