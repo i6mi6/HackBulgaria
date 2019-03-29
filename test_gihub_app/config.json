@@ -1,9 +1,0 @@
-{
-  "rules": [
-    {
-      "path": "test_github_app/*",
-      "blacklist": ["*.json"],
-      "regex": "\\button\n\\s*wideRow\\"
-    }
-  ]
-}
