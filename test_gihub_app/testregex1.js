@@ -172,7 +172,6 @@ class StoreListItem extends React.Component {
         key={storeConnection.node.id}
         style={styles.storeCard}> 
         <CardItem
-          button
           wideRow
           activeOpacity={1}
           onPress={this.onPress}
