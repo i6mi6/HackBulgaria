@@ -166,7 +166,7 @@ class StoreListItem extends React.Component {
 
   render() {
     const { storeConnection } = this.props
-    
+    // dd
     return (
       <Card
         transparent
