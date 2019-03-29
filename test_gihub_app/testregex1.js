@@ -170,7 +170,7 @@ class StoreListItem extends React.Component {
       <Card
         transparent
         key={storeConnection.node.id}
-        style={styles.storeCard}>
+        style={styles.storeCard}> 
         <CardItem
           button
           wideRow
