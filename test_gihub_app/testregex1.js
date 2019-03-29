@@ -199,7 +199,7 @@ export default compose(
   connect(null, {
     setStoreConnectionId,
     setStoreImapiConnectionId,
-    waitingForStore,
+    waitingForStore, 
     openModal,
     closeModal, 
   }),
