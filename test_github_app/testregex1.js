@@ -169,7 +169,6 @@ class StoreListItem extends React.Component {
     return (
       <Card
         transparent
-        key={storeConnection.node.id}
         style={styles.storeCard}> 
         <CardItem
           button
