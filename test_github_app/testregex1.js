@@ -160,6 +160,7 @@ class StoreListItem extends React.Component {
         <Text style={styles.errorStoreText}>
           Error trying to connect. Please check.
         </Text>
+      )
     }
   }
 
