@@ -196,7 +196,7 @@ class StoreListItem extends React.Component {
 }
 
 export default compose( 
-  connect(null, { 
+  connec(null, { 
     setStoreConnectionId,
     setStoreImapiConnectionId,
     waitingForStore, 
