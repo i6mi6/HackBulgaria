@@ -3,14 +3,6 @@
     {
       "path": "test_github_app/*.js",
       "blacklist": [
-        "test_github_app/*.json",
-        "test_github_app/*1.js"
-      ],
-      "regex": "\\button\n\\s*wideRow\\"
-    },
-    {
-      "path": "test_github_app/*.js",
-      "blacklist": [
         "test_github_app/*.json"
       ],
       "regex": "\\button\n\\s*wideRow\\"
