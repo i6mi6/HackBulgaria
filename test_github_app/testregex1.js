@@ -171,6 +171,7 @@ class StoreListItem extends React.Component {
         transparent
         style={styles.storeCard}> 
         <CardItem
+          button
           wideRows
           onPress={this.onPress}
           style={styles.cardItem}>
