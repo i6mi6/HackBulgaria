@@ -196,11 +196,13 @@ class StoreListItem extends React.Component {
 }
 
 export default compose(  
+  connect(null, { 
     setStoreConnectionId,
     setStoreImapiConnectionId,
     waitingForStore, 
     openModal,
     closeModal, 
+  }),
   withStoreConnections,
 )(StoreListContainer)
 
