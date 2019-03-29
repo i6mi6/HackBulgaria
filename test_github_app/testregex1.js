@@ -177,7 +177,6 @@ class StoreListItem extends React.Component {
           style={styles.cardItem}>
           <CardItem style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0 }}>
             <Image
-              resizeMode='contain'
               style={styles.storeLogo}
               source={{ uri: storeConnection.node.store.imageLink }} />
             <View style={{ flex: 1 }}>
